@@ -1,0 +1,648 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#fafafa;
+    margin: auto;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.portadita {
+    margin-top: 50px;
+    overflow: hidden;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.logo-menu{
+    display: flex;
+    height: 10vh;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+* a:link{
+    text-decoration: none;
+    color:#212529;
+    cursor: pointer;
+}
+
+.logo{
+    height: 8vh;
+    display: flex;
+    margin-left: 20px;
+    cursor:pointer;
+}
+
+.logo:hover{
+    transform: scale(0.9);
+}
+
+h1{
+    font-family: 'Caveat', cursive;
+    font-size: 35px !important;
+}
+
+/*Contenedor*/
+.popup {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px; /* Ancho de la pantalla emergente */
+    height: 100vh; /* Establece la altura en 100% de la altura de la ventana */
+    /*overflow-y: auto; /* Habilita la barra de desplazamiento vertical si es necesario */
+    background-color: #fafafa; /* Cambia el color de fondo a púrpura */
+    border: 5px solid #0372B5;
+    padding: 10px;
+    z-index: 2;
+    animation: slideIn 0.1s forwards; /* Agrega una animación de entrada */
+}
+
+@keyframes slideIn {
+        from {
+            transform: translateX(100%); /* Inicia la animación desde la derecha de la pantalla */
+        }
+        to {
+            transform: translateX(0); /* Termina la animación en la posición final */
+        }
+    }  
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 20px;
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    font-size: 18px;
+    font-family: 'Yuji Hentaigana Akari', cursive;
+    
+}
+
+.popup-content a {
+    text-decoration: none;
+    color: #F18402;
+    flex-direction: column;
+    text-align: center;
+}
+
+.linea {
+    border: none; /* Elimina el borde predeterminado */
+    height: 2px; /* Define la altura de la línea */
+    background-color: #F18402; /* Establece el color de fondo de la línea */
+    margin: 30px 0; /* Añade margen encima y debajo de la línea para separarla del contenido */
+    }
+
+ul li a:hover{
+    color: #0372B5;
+}
+
+.cierro{
+    color:#CF282E;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    cursor:pointer;
+}
+
+.cierro:hover{
+    color: #0372B5;
+}
+
+/*btn redes sociales*/
+button{
+    font-family: 'Caveat', cursive;
+    border: 2px solid #0372B5;
+    background-color: #0372B5;
+    color: #fafafa;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+/*dropdonw redes*/
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+
+/*iconos redes sociales*/
+.iconos{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.iconos:hover{
+    transform: scale(1.1);
+    background-color: #fafafa;
+    border-radius: 15px;
+}
+
+.redes{
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.frase{
+    color: #0372B5;
+    font-style: italic;  
+    text-align: center;
+    font-size: 15px;  
+    margin-top: 20px;
+}
+
+.frase:hover{
+    color: #F18402; 
+    cursor: pointer;  
+}
+
+/*encabezados*/
+h2{
+    font-size: 30px !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h3{
+    font-size: 25px !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.espacios{
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.row{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px; /*marco tipo tarjetita*/
+}
+
+.pic{
+    background-color: #0372B5;
+    color: #fafafa;
+}
+
+/*Whatsapp y rayitas*/
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorw{
+    display: flex;
+    flex-direction: column;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.whatsapp{
+    width: 50%;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.whatsapp:hover{
+    transform: scale(1.1);
+}
+
+/*Truchitresponsive*/
+.on{
+    display: none;
+}
+
+/*nombres*/
+.instructores{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/*graduación instructores*/
+h6{
+    font-size: 15px;
+}
+
+/*Leyenda y Dojo*/
+.texto{
+    margin: 0 auto;
+    font-size: 18px;   
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px; /* Espacio arriba de la imagen */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fondo oscuro semitransparente */
+    text-align: center;
+}
+
+/* Estilo para el contenido del modal (la imagen) */
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 100%; /* Tamaño máximo de la imagen */
+    max-height: 100%; /* Altura máxima de la imagen */
+}
+
+/*Schema*/
+div.oculto{
+    display: none;
+}
+
+
+/*Textos del footer a L y R */
+.copy{
+    float: left;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.copy a{
+    text-decoration: none;
+    color: #212529;
+}
+
+.copy a:hover{
+    color: #F18402;
+    text-decoration: underline;
+}
+
+.copy2{
+    float: right;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.copy2 a:hover{
+    color: #F18402;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 767px) 
+    { 
+        body{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#fafafa;
+            margin: auto;
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }   
+
+        *{
+            box-sizing: border-box;
+        }
+
+            h1{
+                font-family: 'Caveat', sans-serif;
+                font-size: 20px !important;
+                margin: 10px 10px 10px 10px;
+            }
+
+            .portadita {
+                margin-top: 35px;
+                overflow: hidden;
+                height: auto;
+            }
+            
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fafafa; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+            }
+
+            .logo-menu{
+                display: flex;
+                height: 10vh;
+                margin-right: 5px !important;
+                cursor:pointer;
+            }
+            
+            * a:link{
+                text-decoration: none;
+                color:#212529;
+                cursor: pointer;
+            }
+            
+            .logo{
+                height: 8vh;
+                display: flex;
+                margin-left: 8px;
+                cursor:pointer;
+            }
+            /*Contenedor*/
+            .popup {
+                display: none;
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 200px; /* Ancho de la pantalla emergente */
+                height: 100vh; /* Establece la altura en 100% de la altura de la ventana */
+                overflow-y: auto; /* Habilita la barra de desplazamiento vertical si es necesario */
+                background-color: #fafafa; /* Cambia el color de fondo a púrpura */
+                border: 5px solid #0372B5;
+                padding: 10px;
+                z-index: 2;
+                animation: slideIn 0.1s forwards; /* Agrega una animación de entrada */
+            }
+
+            @keyframes slideIn {
+                    from {
+                        transform: translateX(100%); /* Inicia la animación desde la derecha de la pantalla */
+                    }
+                    to {
+                        transform: translateX(0); /* Termina la animación en la posición final */
+                    }
+                }  
+
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li{
+                text-align: left; /* Alinea el texto a la izquierda */
+                margin-top: 10px;
+                margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+                margin-right: 20px !important;
+                font-size: 15px;
+                font-family: 'Caveat', sans-serif, 'Roboto', sans-serif;
+            }
+
+            .popup-content a {
+                text-decoration: none;
+                color: #F18402;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .linea {
+                border: none; /* Elimina el borde predeterminado */
+                height: 2px; /* Define la altura de la línea */
+                background-color: #F18402; /* Establece el color de fondo de la línea */
+                margin: 15px 0; /* Añade margen encima y debajo de la línea para separarla del contenido */
+                }
+
+            ul li a:hover{
+                color: #0372B5;
+            }
+
+            .cierro{
+                color:#CF282E;
+                font-family: 'Caveat', sans-serif;
+                font-size: 20px;
+                cursor:pointer;
+            }
+
+            .cierro:hover{
+                color: #0372B5;
+            }
+
+            /*btn redes sociales*/
+            button{
+                font-family: 'Caveat', sans-serif, 'Roboto', sans-serif ;
+                border: 2px solid #0372B5;
+                background-color: #0372B5;
+                color: #fafafa;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+            }
+
+            /*dropdonw redes*/
+            .dropdown{
+                display: flex;
+                flex-direction: column;
+            }
+
+            /*iconos redes sociales*/
+            .iconos{
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            .iconos:hover{
+                transform: scale(1.1);
+                background-color: #fafafa;
+                border-radius: 15px;
+            }
+
+            .redes{
+                display: none;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+            .frase{
+                color: #0372B5;
+                font-style: italic;  
+                text-align: center;
+                font-size: 10px;  
+                margin-top: 20px;
+            }
+
+            .frase:hover{
+                color: #F18402; 
+                cursor: pointer;  
+            }       
+
+                /*Leyenda y Dojo*/
+            .texto{
+                margin: 0 auto;
+                font-size: 15px;   
+            }
+            /*encabezados*/
+            h2{
+                font-size: 18px !important;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h3{
+                font-size: 15px !important;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            /*Textos del footer a L y R */
+            .copy{
+                float: left;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+            .copy a{
+                text-decoration: none;
+                color: #212529;
+            }
+
+            .copy a:hover{
+                color: #F18402;
+                text-decoration: underline;
+            }
+
+            .copy2{
+                float: left;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+            .copy2 a:hover{
+                color: #F18402;
+                text-decoration: underline;
+            }
+            
+            .espacios{
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            
+            .row{
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .card{
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px; /*marco tipo tarjetita*/
+            }
+            
+            .pic{
+                background-color: #0372B5;
+                color: #fafafa;
+            }
+            
+            /*Whatsapp*/
+            .contenedorw{
+                display: none;
+            }
+            
+            .logos{
+                display: flex;
+            }
+            
+            .whatsapp{
+                width: 50%;
+                cursor: pointer;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            
+            .whatsapp:hover{
+                transform: scale(1.1);
+            }
+
+            /*truchiresponsive para ubicar los logos de whatsapp antes del footer*/
+            .on{
+                display: flex;
+                flex-direction: column;
+            }
+            
+
+            .logos a{
+                color: #212529;
+            }
+            /*nombres*/
+            .instructores{
+                margin-top: 10px;
+                font-size: 17px !important;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            
+            /*graduación instructores*/
+            h6{
+                font-size: 12px !important;
+            }
+
+            /* Estilo para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px; /* Espacio arriba de la imagen */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7); /* Fondo oscuro semitransparente */
+            text-align: center;
+        }
+
+        /* Estilo para el contenido del modal (la imagen) */
+        .modal-contenido {
+            margin: auto;
+            display: block;
+            max-width: 100% ; /* Tamaño máximo de la imagen */
+            max-height: 100%; /* Altura máxima de la imagen */
+            overflow: auto;
+        }
+
+
+
+}
+
+
+
